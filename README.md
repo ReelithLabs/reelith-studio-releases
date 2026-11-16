@@ -11,6 +11,7 @@
 
 <p align="center">
   <a href="https://github.com/ReelithLabs/reelith-studio-releases/releases/latest"><img alt="Última versión" src="https://img.shields.io/github/v/release/ReelithLabs/reelith-studio-releases?label=versi%C3%B3n&color=1565ff"></a>
+  <img alt="Beta" src="https://img.shields.io/badge/estado-beta-f59e0b">
   <img alt="Windows 10 y 11, 64 bits" src="https://img.shields.io/badge/Windows-10%20%C2%B7%2011-111827">
   <a href="#privacidad"><img alt="Sin telemetría" src="https://img.shields.io/badge/telemetr%C3%ADa-ninguna-111827"></a>
 </p>
@@ -26,6 +27,9 @@
 <p align="center">
   <img src="docs/estudio.png" width="100%" alt="Reelith Studio en Windows: la vista previa, las escenas, las fuentes, el mezclador de audio y dos destinos, Twitch y Kick, listos para emitir">
 </p>
+
+> [!NOTE]
+> **Reelith Studio está en beta.** Ya puedes grabar y emitir con él, y lo seguimos mejorando en cada versión: más rendimiento, la versión para Mac y las ideas que nos mandes. Si algo no va bien, [avísanos](https://github.com/ReelithLabs/reelith-studio-releases/issues/new/choose) y lo arreglamos.
 
 ## Qué es
 
