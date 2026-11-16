@@ -6,6 +6,7 @@ En Reelith Studio usamos estos componentes de código abierto y de terceros. Cad
 | --- | --- | --- |
 | [GStreamer](https://gstreamer.freedesktop.org) 1.26.11 y sus plugins | Motor de vídeo y audio | LGPL 2.1 o posterior |
 | [FFmpeg](https://ffmpeg.org), dentro de gst-libav | Codificar el audio AAC | LGPL 2.1 o posterior |
+| [x264](https://www.videolan.org/developers/x264.html), dentro de GStreamer | Codificar el vídeo H.264 con el procesador | GPL 2.0 o posterior |
 | [gstreamer-rs](https://gitlab.freedesktop.org/gstreamer/gstreamer-rs) | Unir la aplicación con GStreamer | MIT o Apache 2.0 |
 | [Tauri](https://tauri.app) | Ventanas y empaquetado | MIT o Apache 2.0 |
 | [React](https://react.dev), [Tailwind CSS](https://tailwindcss.com), [Lucide](https://lucide.dev) | Interfaz | MIT e ISC |
@@ -24,7 +25,7 @@ Todas estas bibliotecas se enlazan de forma dinámica. Son archivos `.dll` indep
 
 ## Codificación de vídeo
 
-El instalador **no incluye x264** ni ningún otro componente con licencia GPL. El vídeo H.264 lo codifica la tarjeta gráfica (NVIDIA NVENC, Intel Quick Sync o AMD AMF) o, si el equipo no tiene codificador de vídeo, el codificador H.264 de Windows (Media Foundation), que forma parte del sistema y no se distribuye con la aplicación.
+El vídeo H.264 lo codifica la tarjeta gráfica (NVIDIA NVENC, Intel Quick Sync o AMD AMF). Cuando el equipo no tiene codificador de vídeo, o si eliges el procesador, se usa x264, que va incluido en el instalador como plugin de GStreamer (`gstx264.dll`), con licencia GPL 2.0 o posterior. Su código fuente está en https://code.videolan.org/videolan/x264
 
 ## Contacto
 
