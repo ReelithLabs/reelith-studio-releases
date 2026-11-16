@@ -1,6 +1,6 @@
 # Componentes de terceros
 
-Reelith Studio usa estos componentes de código abierto y de terceros. Cada uno conserva su propia licencia.
+En Reelith Studio usamos estos componentes de código abierto y de terceros. Cada uno conserva su propia licencia.
 
 | Componente | Para qué lo usa | Licencia |
 | --- | --- | --- |
@@ -28,4 +28,4 @@ El instalador **no incluye x264** ni ningún otro componente con licencia GPL. E
 
 ## Contacto
 
-Si crees que falta algún aviso de licencia o quieres pedirnos algo sobre estos componentes, [abre un aviso](https://github.com/ReelithLabs/reelith-studio-releases/issues/new/choose).
+Si crees que nos falta algún aviso de licencia o quieres pedirnos algo sobre estos componentes, [abre un aviso](https://github.com/ReelithLabs/reelith-studio-releases/issues/new/choose).

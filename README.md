@@ -31,7 +31,7 @@
 
 Reelith Studio es una aplicación de escritorio para grabar y emitir en directo. Tiene lo que esperas de un programa de streaming (escenas, fuentes, filtros, mezclador de audio y modo estudio), pero viene pensada para que la tengas lista en minutos: conoce tu equipo, te propone los ajustes que aguanta y hace el trabajo pesado en la tarjeta gráfica para quitarle lo mínimo a tu juego.
 
-Es de [Reelith](https://reelith-platform.xyz), la plataforma de alertas, voces y bot para streamers. Tus alertas, tu chat y tus metas de Reelith se añaden a tus escenas como páginas web.
+Lo hacemos en [Reelith](https://reelith-platform.xyz), la plataforma de alertas, voces y bot para streamers. Si ya la usas, tus alertas, tu chat y tus metas se añaden a tus escenas como páginas web.
 
 ## Descargar
 
@@ -68,7 +68,7 @@ Get-FileHash .\Reelith-Studio-Setup-x64.exe -Algorithm SHA256
 
 El resultado tiene que ser igual al de `SHA256SUMS.txt` de esa versión. Si no coincide, no lo instales y [avísanos](https://github.com/ReelithLabs/reelith-studio-releases/issues/new/choose).
 
-Los instaladores se compilan de forma automática en GitHub Actions, a partir del código fuente, y se publican aquí sin pasar por el ordenador de nadie. Descárgalos solo desde esta página o desde [reelith-platform.xyz](https://reelith-platform.xyz).
+Compilamos los instaladores de forma automática en GitHub Actions, a partir del código fuente, y los publicamos aquí sin que pasen por el ordenador de nadie. Descárgalos solo desde esta página o desde [reelith-platform.xyz](https://reelith-platform.xyz).
 
 ## Funciones
 
@@ -115,7 +115,7 @@ Los instaladores se compilan de forma automática en GitHub Actions, a partir de
 
 ## Privacidad
 
-- Reelith Studio no lleva analíticas ni telemetría. No envía datos de uso a nadie, tampoco a Reelith.
+- Reelith Studio no lleva analíticas ni telemetría. No envía datos de uso a nadie, tampoco a nosotros.
 - Solo se conecta a los destinos que tú añades (Twitch, Kick, YouTube…) y a las páginas web que pones en tus escenas.
 - Tus claves de emisión, tus escenas y tus ajustes se guardan en tu PC.
 - El registro de errores se queda en tu equipo, en `%LOCALAPPDATA%\Reelith Studio\Logs`. Solo nos llega si tú nos lo mandas para que te ayudemos.
@@ -128,6 +128,6 @@ Los instaladores se compilan de forma automática en GitHub Actions, a partir de
 
 ## Licencia
 
-Reelith Studio es software propietario de Reelith. Puedes descargarlo, instalarlo y usarlo según sus [condiciones de uso](LICENSE). Usa componentes de código abierto que conservan sus propias licencias: están en [THIRD-PARTY-NOTICES.md](THIRD-PARTY-NOTICES.md).
+Reelith Studio es nuestro y no es de código abierto. Puedes descargarlo, instalarlo y usarlo siguiendo nuestras [condiciones de uso](LICENSE). Usamos componentes de código abierto que conservan sus propias licencias, y los tienes todos en [THIRD-PARTY-NOTICES.md](THIRD-PARTY-NOTICES.md).
 
 <p align="center"><sub>© 2026 Reelith · <a href="https://reelith-platform.xyz">reelith-platform.xyz</a></sub></p>
