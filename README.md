@@ -13,11 +13,14 @@
   <a href="https://github.com/ReelithLabs/reelith-studio-releases/releases/latest"><img alt="Última versión" src="https://img.shields.io/github/v/release/ReelithLabs/reelith-studio-releases?label=versi%C3%B3n&color=1565ff"></a>
   <img alt="Beta" src="https://img.shields.io/badge/estado-beta-f59e0b">
   <img alt="Windows 10 y 11, 64 bits" src="https://img.shields.io/badge/Windows-10%20%C2%B7%2011-111827">
+  <img alt="macOS 14 o posterior, Apple Silicon" src="https://img.shields.io/badge/macOS-14%2B%20%C2%B7%20Apple%20Silicon-111827">
   <a href="#privacidad"><img alt="Sin telemetría" src="https://img.shields.io/badge/telemetr%C3%ADa-ninguna-111827"></a>
 </p>
 
 <p align="center">
   <a href="https://github.com/ReelithLabs/reelith-studio-releases/releases/latest/download/Reelith-Studio-Setup-x64.exe"><strong>Descargar para Windows</strong></a>
+  &nbsp;·&nbsp;
+  <a href="https://github.com/ReelithLabs/reelith-studio-releases/releases/latest/download/Reelith-Studio-macOS-arm64.dmg"><strong>Descargar para Mac</strong></a>
   &nbsp;·&nbsp;
   <a href="https://github.com/ReelithLabs/reelith-studio-releases/releases">Todas las versiones</a>
   &nbsp;·&nbsp;
@@ -29,7 +32,7 @@
 </p>
 
 > [!NOTE]
-> **Reelith Studio está en beta.** Ya puedes grabar y emitir con él, y lo seguimos mejorando en cada versión: más rendimiento, la versión para Mac y las ideas que nos mandes. Si algo no va bien, [avísanos](https://github.com/ReelithLabs/reelith-studio-releases/issues/new/choose) y lo arreglamos.
+> **Reelith Studio está en beta.** Ya puedes grabar y emitir con él, y lo seguimos mejorando en cada versión: más rendimiento y las ideas que nos mandes. Si algo no va bien, [avísanos](https://github.com/ReelithLabs/reelith-studio-releases/issues/new/choose) y lo arreglamos.
 
 ## Qué es
 
@@ -42,9 +45,9 @@ Lo hacemos en [Reelith](https://reelith-platform.xyz), la plataforma de alertas,
 | Sistema | Descarga |
 | --- | --- |
 | Windows 10 (versión 1903 o posterior) y Windows 11, de 64 bits | **[Reelith-Studio-Setup-x64.exe](https://github.com/ReelithLabs/reelith-studio-releases/releases/latest/download/Reelith-Studio-Setup-x64.exe)** |
-| macOS (Apple Silicon) | Próximamente |
+| macOS 14 Sonoma o posterior, en un Mac con Apple Silicon (M1 o posterior) | **[Reelith-Studio-macOS-arm64.dmg](https://github.com/ReelithLabs/reelith-studio-releases/releases/latest/download/Reelith-Studio-macOS-arm64.dmg)** |
 
-Cada versión tiene su página en [Versiones](https://github.com/ReelithLabs/reelith-studio-releases/releases), con lo que cambia y la huella SHA-256 del instalador.
+Cada versión tiene su página en [Versiones](https://github.com/ReelithLabs/reelith-studio-releases/releases), con lo que cambia y la huella SHA-256 de cada instalador.
 
 ## Instalar en Windows
 
@@ -62,12 +65,37 @@ Lo que hace el instalador, y nada más:
 
 Para desinstalarlo: **Configuración › Aplicaciones › Aplicaciones instaladas › Reelith Studio › Desinstalar**.
 
+## Instalar en Mac
+
+1. Descarga el DMG, ábrelo y arrastra **Reelith Studio** a la carpeta **Aplicaciones**.
+2. Abre Reelith Studio desde Aplicaciones. La primera vez, macOS avisa de que no puede comprobar la aplicación y no la abre: pulsa **Aceptar**.
+3. Abre **Ajustes del Sistema › Privacidad y seguridad**, baja hasta **Seguridad** y pulsa **Abrir igualmente** junto al aviso de Reelith Studio. El botón aparece durante una hora, más o menos, después de haber intentado abrirla.
+4. Vuelve a salir el aviso: pulsa **Abrir** y confirma con tu contraseña o tu huella. Solo hay que hacerlo una vez. Desde entonces se abre con doble clic.
+5. macOS te pedirá permiso para grabar la pantalla y para usar la cámara y el micrófono cuando hagan falta. Acéptalos y, si te lo pide, vuelve a abrir la aplicación. Los tienes en **Ajustes del Sistema › Privacidad y seguridad**.
+
+> **¿Por qué avisa macOS?** Apple solo abre sin avisar las aplicaciones que el desarrollador ha firmado con una cuenta de pago de Apple y le ha enviado para que las revise («certificar ante notario»). Todavía no tenemos esa cuenta, así que Reelith Studio va sin esa firma. El aviso no significa que la aplicación tenga nada malo, pero como Apple no la ha revisado, la garantía de que tu archivo es exactamente el que publicamos es su huella (lo explicamos [más abajo](#comprobar-que-el-instalador-es-el-original)). Por la misma razón, después de actualizar Reelith Studio macOS puede volver a pedirte los permisos de pantalla, cámara y micrófono.
+
+Lo que lleva el DMG, y nada más:
+
+- Una sola aplicación, que funciona en Mac con Apple Silicon (M1 o posterior) y macOS 14 Sonoma o posterior. No funciona en Mac con procesador Intel.
+- Lleva dentro todo lo que necesita (GStreamer). No instala nada fuera de la aplicación ni cambia otros programas: si tienes OBS o GStreamer instalados, siguen igual.
+
+Para desinstalarlo, arrastra Reelith Studio de Aplicaciones a la Papelera.
+
 ## Comprobar que el instalador es el original
 
-Cada versión publica un archivo `SHA256SUMS.txt` con la huella SHA-256 del instalador. Abre PowerShell en la carpeta donde lo descargaste y escribe:
+Cada versión publica un archivo `SHA256SUMS.txt` con la huella SHA-256 de cada instalador.
+
+En Windows, abre PowerShell en la carpeta donde lo descargaste y escribe:
 
 ```powershell
 Get-FileHash .\Reelith-Studio-Setup-x64.exe -Algorithm SHA256
+```
+
+En Mac, abre Terminal y escribe:
+
+```sh
+shasum -a 256 ~/Downloads/Reelith-Studio-macOS-arm64.dmg
 ```
 
 El resultado tiene que ser igual al de `SHA256SUMS.txt` de esa versión. Si no coincide, no lo instales y [avísanos](https://github.com/ReelithLabs/reelith-studio-releases/issues/new/choose).
@@ -113,16 +141,23 @@ Compilamos los instaladores de forma automática en GitHub Actions, a partir del
 
 ## Requisitos
 
+En Windows:
+
 - Windows 10 versión 1903 o posterior, o Windows 11, de 64 bits.
 - Una tarjeta gráfica compatible con Direct3D 11.
 - Para grabar y emitir gastando lo mínimo: una tarjeta gráfica NVIDIA, AMD o Intel con codificador de vídeo, como la mayoría de las de los últimos años.
+
+En Mac:
+
+- Un Mac con Apple Silicon (M1 o posterior).
+- macOS 14 Sonoma o posterior.
 
 ## Privacidad
 
 - Reelith Studio no lleva analíticas ni telemetría. No envía datos de uso a nadie, tampoco a nosotros.
 - Solo se conecta a los destinos que tú añades (Twitch, Kick, YouTube…) y a las páginas web que pones en tus escenas.
-- Tus claves de emisión, tus escenas y tus ajustes se guardan en tu PC.
-- El registro de errores se queda en tu equipo, en `%LOCALAPPDATA%\Reelith Studio\Logs`. Solo nos llega si tú nos lo mandas para que te ayudemos.
+- Tus claves de emisión, tus escenas y tus ajustes se guardan en tu equipo.
+- El registro de errores se queda en tu equipo: en Windows, en `%LOCALAPPDATA%\Reelith Studio\Logs`; en Mac, en `~/Library/Logs/Reelith Studio`. Solo nos llega si tú nos lo mandas para que te ayudemos.
 
 ## Ayuda
 
