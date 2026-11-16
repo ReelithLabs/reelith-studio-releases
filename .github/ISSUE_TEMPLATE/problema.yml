@@ -1,0 +1,47 @@
+name: Algo no funciona
+description: Cuéntanos qué falló en Reelith Studio.
+labels: ["problema"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Gracias por avisarnos. Los avisos son públicos: **nunca pegues aquí tus claves de emisión ni contraseñas**.
+  - type: input
+    id: version
+    attributes:
+      label: Versión de Reelith Studio
+      description: Está en Ajustes › Acerca de.
+      placeholder: "0.2.0"
+    validations:
+      required: true
+  - type: dropdown
+    id: sistema
+    attributes:
+      label: Sistema
+      options:
+        - Windows 11
+        - Windows 10
+    validations:
+      required: true
+  - type: textarea
+    id: que-paso
+    attributes:
+      label: ¿Qué pasó?
+      description: Qué hiciste, qué esperabas que pasara y qué pasó en realidad. Si tienes capturas, arrástralas aquí.
+    validations:
+      required: true
+  - type: textarea
+    id: pasos
+    attributes:
+      label: ¿Cómo lo repetimos?
+      description: Los pasos para que nos pase lo mismo, si los sabes.
+      placeholder: |
+        1. Abrir Reelith Studio
+        2. Pulsar Grabar
+        3. …
+  - type: textarea
+    id: diagnostico
+    attributes:
+      label: Diagnóstico
+      description: En el panel Estado, abre Diagnóstico, pulsa Copiar y pégalo aquí. Nos dice qué está usando tu equipo.
+      render: text

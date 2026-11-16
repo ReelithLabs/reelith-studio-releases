@@ -1,0 +1,11 @@
+name: Tengo una idea
+description: Algo que te gustaría que tuviera Reelith Studio.
+labels: ["idea"]
+body:
+  - type: textarea
+    id: idea
+    attributes:
+      label: ¿Qué te gustaría?
+      description: Cuéntanos qué quieres hacer y por qué te ayudaría en tus directos.
+    validations:
+      required: true
